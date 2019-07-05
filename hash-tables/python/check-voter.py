@@ -10,7 +10,7 @@ def check_voter(name):
     voted[name] = True
     print "{%s}: let them vote!" % name
 
-check_voter("tom")   # let them vote!
-check_voter("mike")  # let them vote!
-check_voter("mike")  # kick them out!!
+check_voter("tom")    # let them vote!
+check_voter("mike")   # let them vote!
+check_voter("mike")   # kick them out!!
 
