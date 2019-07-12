@@ -7,25 +7,24 @@ function removeSpaces(phrase) {
 }
 
 function checkPalindrome(phrase) {
-  let newPhrase = removeSpaces(phrase).toLowerCase();
-  let phraseParts = newPhrase.split("");
-  let phraseLength = newPhrase.length;
-  let count = phraseLength;
-  let numLetters = 0;
-
-  for (let i = 0; i < phraseLength; i++) {
-    if (phraseParts[i] == phraseParts[count - 1]) {
-      numLetters += 1;
+  let splitPhrase = removeSpaces(phrase).toLowerCase().split("");
+  let length = splitPhrase.length;
+  let count = splitPhrase.length;
+  let letters = 0;
+ 
+  for (let i = 0; i < length; i++) {
+    if (splitPhrase[i] == splitPhrase[count - 1]) {
+      letters += 1;
     }
 
     count--;
   }
 
-  showResults(numLetters, phraseLength);
+  showResults(letters, length);
 }
 
-function showResults(numLetters, phraseLength) {
-  if (numLetters == phraseLength) {
+function showResults(letters, lenght) {
+  if (letters == lenght) {
     console.log("Is a Palindrome");
   } else {
     console.log("Is not a Palindrome");
